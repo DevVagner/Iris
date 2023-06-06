@@ -148,7 +148,7 @@ Ex:* _/send + a mensagem que deseja enviar_
       
       findUsers = coll_users.find({})
       for user in findUsers:
-        s=requests.post(f"https://api.telegram.org/bot{token}/sendMessage?chat_id={user[user['chat_id']]}&text={MSG}&parse_mode=MARKDOWN")
+        s=requests.post(f"https://api.telegram.org/bot{token}/sendMessage?chat_id={user['chat_id']}&text={MSG}&parse_mode=MARKDOWN")
 
 
 @bot.message_handler(commands=['gift'])
